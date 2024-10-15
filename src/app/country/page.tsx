@@ -1,8 +1,8 @@
 // import countries from "../data/data";
 // import Link from "next/link";
 // export default function Country (){
-    
-    
+
+
 //     return(
 //         <div>
 //            <ul>
@@ -19,14 +19,18 @@
 import countries from "../data/data"; // Import the list of countries from data file
 import Link from "next/link";  // Import Link for navigation
 
+interface Country {
+    name: string;
+}
+
 export default function Country() {
     return (
         <div>
             <ul>
-                {countries.map((country: any) => (
-                    <li key={country.name}> {}
-                        <Link href={`/country/${country.name.toLowerCase()}`}> {}
-                            {country.name} {}
+                {countries.map((country: Country) => (
+                    <li key={country.name}> { }
+                        <Link href={`/country/${country.name.toLowerCase()}`}> { }
+                            {country.name} { }
                         </Link>
                     </li>
                 ))}
